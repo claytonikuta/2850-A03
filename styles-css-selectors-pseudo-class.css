@@ -1,0 +1,253 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Global Variables */
+:root {
+  --brand-color: #ffbe98;
+  --secondary-color: #701f32;
+  --tertiary-color: #99ffdc;
+  --quaternary-color: #99dfff;
+
+  /* Grid Variables */
+  --one-col: 100%;
+  --two-col: 49%;
+  --three-col: 32%;
+  --four-col: 23.5%;
+
+  /* Layout Variables */
+  /* Calculations explained: 
+	  30 -> spacing in pixels
+	  16 -> 1rem = 16px
+	  To figure out the rem value of a 
+	  pixel value divide the px value
+	  by 16 (assuming the user has left
+	  the default size as 16 in the browser
+	  settings)
+   */
+  --space: calc(30 / 16);
+  --pad: calc(var(--space) * 1rem);
+  --pad-half: calc(var(--pad) / 2);
+
+  /* Font-Stacks	*/
+  --font-headings: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  --font-body: Baskerville, "Palatino Linotype", Palatino,
+    "Century Schoolbook L", "Times New Roman", "serif";
+}
+
+/* Resets */
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Typography */
+body {
+  line-height: 1.4;
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+nav a {
+  font-family: var(--font-headings);
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #fff 0%, var(--brand-color) 100%);
+  min-height: 100vh;
+}
+
+.wrapper {
+  background-color: white;
+  max-width: 860px;
+  margin: var(--pad) auto;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 90vh;
+}
+
+header {
+  --color: var(--secondary-color);
+  background-color: var(--brand-color);
+  color: var(--color);
+  border-radius: 1rem 1rem 0 0;
+}
+
+header h1 {
+  margin: 0;
+  padding: var(--pad-half) var(--pad);
+}
+
+/* Main Styles */
+main {
+  padding: var(--pad);
+}
+
+main h1:first-child,
+main h2:first-child {
+  margin-top: 0;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: var(--pad) 0;
+}
+
+.col {
+  width: var(--three-col);
+  padding: var(--pad);
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.col figure {
+  margin: 0;
+}
+
+.col figure h2 {
+  margin-top: 0.6em;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.box {
+  width: 250px;
+  height: 250px;
+  background-color: #01a24a;
+}
+
+.container {
+  background-color: #0200b5;
+  padding: var(--pad);
+  color: white;
+}
+
+.container h2:first-child,
+.container p:first-child {
+  margin-top: 0;
+}
+
+.container p:last-child {
+  margin-bottom: 0;
+}
+
+/* Table Styles */
+#demo-tables {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: var(--pad);
+}
+
+.dt {
+  border: 2px solid black;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  width: 48%;
+}
+
+.dt caption {
+  background-color: var(--brand-color);
+  padding: 10px;
+  --border: 2px solid black;
+  border-left: var(--border);
+  border-top: var(--border);
+  border-right: var(--border);
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.dt td,
+.dt th {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.dt thead {
+  background-color: #e7e7e7;
+}
+
+.dt tfoot {
+  background-color: #b1ffff;
+}
+
+/* Pseudo Class Selectors */
+
+/* First and Last Child */
+.dt-01 tbody tr:first-child {
+  background-color: var(--tertiary-color);
+}
+
+.dt-01 tbody tr:last-child {
+  background-color: var(--quaternary-color);
+}
+
+/* Nth Child */
+.dt-02 tbody tr:nth-child(3) {
+  background-color: var(--quaternary-color);
+}
+
+/* Nth Child Even and odd */
+.dt-03 tbody tr:nth-child(odd) {
+  background-color: var(--tertiary-color);
+}
+
+.dt-03 tbody tr:nth-child(even) {
+  background-color: var(--quaternary-color);
+}
+
+/* Nth Child Custom Pattern */
+.dt-04 tbody tr:nth-child(3n + 2) {
+  background-color: var(--tertiary-color);
+}
+
+/* Nth of Type */
+
+table:nth-of-type(5) tbody {
+  background-color: var(--tertiary-color);
+}
+
+/* Last of Type */
+table:last-of-type {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+/* footer styles */
+footer {
+  border-top: 1px dotted #ccc;
+  padding: var(--pad-half) var(--pad);
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+span:has(input:required)::after {
+  content: "*";
+}
