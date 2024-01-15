@@ -4,4 +4,13 @@
 /* Global Variables */
 :root {
 
+    --font-color: black;
+    --fonts-headline: Postoni, garamond, serif;
+    --fonts-subhead: Franklin, arial, sans-serif;
+    --fonts-body: georgia, Times New Roman, serif;
 }
+
+
+
+
+
