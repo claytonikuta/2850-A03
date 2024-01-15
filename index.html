@@ -6,16 +6,19 @@
     <title>SSDP-3500-A03-Team-6</title>
     <link rel="stylesheet" href="styles/style.css"/>
     <script src="scripts/script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
     <!-- Navbar code  -->
     <div id ="menu-container">
     <nav id = "menu-wrapper">
-      <div class="navbar-img" id="hamburger-menu">
+      <div id="hamburger-menu" class="navbar-img" >
         <a href ="#" class ="nav-menu-button"><img src="./images/nav-menu-button.png"></a>
         <a href ="#" class ="nav-menu-button"><img src="./images/nav-alert.png"></a>
       </div>
-        <ul class="menu-list">
+            <!-- hamburger-menu -->
+               <!-- menu-wrapper -->
+      <ul id= "nav-desktop" class="menu-list">
           <li><a href="#">Politics</a></li>
           <li><a href="#">Opinions</a></li>
           <li><a href="#">Style</a></li>
@@ -24,9 +27,23 @@
           <li><a href="#">Well+Being</a></li>
           <li><a href="#">Tech</a></li>
           <li><a href="#">World</a></li>
-          
         </ul>
+
+
       </div>
+
+      <div class = "nav-mobile-container">
+        <ul id= "nav-mobile" class="menu-list">
+          <li><a href="#">Politics</a></li>
+          <li><a href="#">Opinions</a></li>
+          <li><a href="#">Style</a></li>
+          <li><a href="#">Investigations</a></li>
+          <li><a href="#">Climate</a></li>
+          <li><a href="#">Well+Being</a></li>
+          <li><a href="#">Tech</a></li>
+          <li><a href="#">World</a></li>
+        </ul>
+    </div>
     </nav>
   </div>
 
