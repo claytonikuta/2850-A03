@@ -76,7 +76,8 @@ nav {
     padding: 8px;
     font-weight: var(--nav-fontWeights-bold);
     font-family: var(--nav-fontSize);
-  
+    font-size: var(--nav-fontSize);
+
   }
 
   /* .active, .nav-mobile-container:active{
@@ -85,7 +86,7 @@ nav {
 
   #nav-mobile li {
     padding: 10px 0px 10px 10px;
-
+    font-family: var(--font-family-franklin);
   }
   
    ul li a {
