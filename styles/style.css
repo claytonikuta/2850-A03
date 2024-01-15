@@ -1,5 +1,16 @@
 @charset "utf-8";
-/* CSS Document */
+html {
+    box-sizing: border-box;
+  }
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
 
 /* Global Variables */
 :root {
@@ -8,8 +19,89 @@
     --fonts-headline: Postoni, garamond, serif;
     --fonts-subhead: Franklin, arial, sans-serif;
     --fonts-body: georgia, Times New Roman, serif;
+    --font-family-franklin: Franklin,Arial,Helvetica,sans-serif;
+    --nav-fontSizes-087: 0.875rem;
+    --nav-fontWeights-bold: 700;
+    --navmenu-button-sizes-125: 1.25rem;
 }
 
+
+/* Nav Bar Styles */
+nav {
+    border-bottom: 1px solid lightgrey;
+    font-family: var(--font-family-franklin);
+    font-size: var(--nav-fontSizes-087);
+    font-weight: var(--nav-fontWeights-bold);
+    display: flex;
+    padding: 0;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    gap: 40px;
+  }
+  
+  nav ul li {
+    display: inline;
+    line-height: 2rem;
+  }
+  
+  nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 8px;
+  }
+  
+  nav ul li a.active,
+  nav ul li a:hover {
+    color: black;
+    background-color: lightgrey;
+    border-radius: 30px;
+  }
+
+  nav img{
+    width: var(--navmenu-button-sizes-125);
+  }
+
+  nav img:hover{
+    background-color: lightgrey;
+    border-radius: 30px;
+    
+  }
+
+ .navbar-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 72px;
+    gap: 20px;
+    margin-left: 8px;
+  }
+
+  #menu-wrapper {
+    overflow: hidden;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+
+#menu-wrapper #hamburger-menu span {
+    opacity: 1;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    position: absolute;
+    transform: rotate(0deg);
+    transition: .4s ease-in-out;
+}
 
 
 
