@@ -215,11 +215,11 @@ nav {
 }
 
 .feature-article-text h5 {
-  margin: 0; /* Remove default margins */
-  padding: 0; /* Remove default padding */
-  line-height: 1.2; /* Adjust line height to bring them closer together */
-  font-size: 0.7rem; /* Make font size smaller */
-  color: grey; /* Change color to grey */
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-size: 0.7rem;
+  color: grey;
 }
 
 /* Media Query */
