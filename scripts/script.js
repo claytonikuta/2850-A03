@@ -21,7 +21,7 @@ $(function () {
     var activeState = $('.nav-mobile-container').hasClass('active');
     // $("#menu-container .nav-mobile-conatainer").css({left: activeState ? "0%" : "-100%"}, 400);
   }
-  $('#menu-wrapper').click(function (event) {
+  $('#hamburger-menu-button').click(function (event) {
     event.stopPropagation();
     $('.nav-mobile-container').toggleClass('active');
     // slideMenu();
