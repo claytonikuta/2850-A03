@@ -241,7 +241,8 @@ nav img:hover {
 
 /* Feature Styles */
 .feature-article {
-  margin: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 #feature-article-carousel {
@@ -377,8 +378,8 @@ nav img:hover {
   .feature-article {
     display: flex;
     align-items: center;
-    margin-right: 50px;
-    margin-left: 50px;
+    /* margin-right: 50px;
+    margin-left: 50px; */
   }
 
   .feature-article-text {
@@ -391,7 +392,7 @@ nav img:hover {
   }
 
   .feature-article-images {
-    padding: 20px;
+    /* padding: 20px; */
     order: 2;
     width: 50%;
     box-sizing: border-box;
