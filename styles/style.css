@@ -218,7 +218,7 @@ nav {
   margin: 0; /* Remove default margins */
   padding: 0; /* Remove default padding */
   line-height: 1.2; /* Adjust line height to bring them closer together */
-  font-size: 0.8rem; /* Make font size smaller */
+  font-size: 0.7rem; /* Make font size smaller */
   color: grey; /* Change color to grey */
 }
 
