@@ -11,17 +11,21 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="scripts/script.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
   <!-- Navbar code  -->
   <div id="menu-container">
     <nav id="menu-wrapper">
-      <div class="navbar-img" id="hamburger-menu">
+      <div id="hamburger-menu" class="navbar-img">
         <a href="#" class="nav-menu-button"><img src="./images/nav-menu-button.png"></a>
         <a href="#" class="nav-menu-button"><img src="./images/nav-alert.png"></a>
       </div>
-      <ul class="menu-list">
+      <!-- hamburger-menu -->
+      <!-- menu-wrapper -->
+      <ul id="nav-desktop" class="menu-list">
         <li><a href="#">Politics</a></li>
         <li><a href="#">Opinions</a></li>
         <li><a href="#">Style</a></li>
@@ -30,14 +34,55 @@
         <li><a href="#">Well+Being</a></li>
         <li><a href="#">Tech</a></li>
         <li><a href="#">World</a></li>
-
       </ul>
+
+
+  </div>
+
+  <div class="nav-mobile-container">
+    <ul id="nav-mobile" class="menu-list">
+      <li><a href="#">Politics</a></li>
+      <li><a href="#">Opinions</a></li>
+      <li><a href="#">Style</a></li>
+      <li><a href="#">Investigations</a></li>
+      <li><a href="#">Climate</a></li>
+      <li><a href="#">Well+Being</a></li>
+      <li><a href="#">Tech</a></li>
+      <li><a href="#">World</a></li>
+    </ul>
   </div>
   </nav>
   </div>
 
   <!-- feature article  -->
-
+  <div class="feature-article">
+    <div class="feature-article-images">
+      <div id="feature-article-carousel" class="owl-carousel owl-theme">
+        <div class="item">
+          <h1>1</h1>
+        </div>
+        <div class="item">
+          <h1>2</h1>
+        </div>
+        <div class="item">
+          <h1>3</h1>
+        </div>
+        <div class="item">
+          <h1>4</h1>
+        </div>
+      </div>
+    </div>
+    <div class="feature-article-text">
+      <h1>Feature Article Title</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+        ultricies, nisl vitae aliquam ultricies, nunc nisl aliquet
+        sapien, vel aliquam nisl nisl vitae nunc. Donec ultricies, nisl
+        vitae aliquam ultricies, nunc nisl aliquet sapien, vel aliquam
+        nisl nisl vitae nunc.
+      </p>
+    </div>
+  </div>
 
   <!-- list of smaller articles -->
   <h1>What's Happening</h1>
@@ -45,8 +90,8 @@
     <article>
       <div class='media-content'>
         <img src="./images/article-img.png" alt="article-image" />
-        <video>
-          <source class='video' src="./videos/article-video.mp4" autoplay="true" muted="muted" type="video/mp4" />
+        <video controls>
+          <source class='video' src="./videos/reading.mp4" autoplay="true" muted="muted" type="video/mp4" />
         </video>
       </div>
 
@@ -57,7 +102,9 @@
       <span class="published-date">Published Jan.15, 2024</span>
     </article>
     <article>
-      <img src="./images/article-img.png" />
+      <div class='media-content'>
+        <img src="./images/article-img.png" />
+      </div>
       <header>Understanding the Iowa caucuses and why they’re important to the election</header>
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
         quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
