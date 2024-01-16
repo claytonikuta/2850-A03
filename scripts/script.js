@@ -30,7 +30,6 @@ $(function () {
   });
 
   //add a faded out play icon on article images that have a videos associated
-  // const $playIcon = $('<i></i>').addClass('fa fa-play-circle play-icon');
   const $playIcon = $('<i></i>').addClass('fa fa-play play-icon');
   $('.media-content').find('video').parent().prepend($playIcon);
 
