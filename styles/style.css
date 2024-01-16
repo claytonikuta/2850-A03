@@ -214,6 +214,14 @@ nav {
   font-weight: var(--nav-fontWeights-bold);
 }
 
+.feature-article-text h5 {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  line-height: 1.2; /* Adjust line height to bring them closer together */
+  font-size: 0.8rem; /* Make font size smaller */
+  color: grey; /* Change color to grey */
+}
+
 /* Media Query */
 
 @media (min-width: 768px) {
