@@ -89,7 +89,7 @@ nav {
     font-family: var(--font-family-franklin);
   }
   
-   ul li a {
+  ul li a {
     color: rgb(0, 0, 0);
     text-decoration: none;
     padding: 8px;
@@ -143,11 +143,26 @@ nav {
     transition: .4s ease-in-out;
 }
 
-/* Feature Styling */
+/* Logo Styles */
+.website-heading{
+  display: flex;
+  justify-content: center;
+}
+
+#website-title{
+  font-family: var(--font-family-franklin);
+  font-size: 3em;
+  font-weight: var(--nav-fontWeights-bold);
+}
+
+/* Feature Styles */
+#feature-article-carousel {
+  height: 200px;
+}
+
 #feature-article-carousel .item {
-    background: #0c83e7;
-    padding: 80px 0px;
-    margin: 5px;
+    padding: 0px;
+    margin: 0px;
     color: #FFF;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -155,10 +170,19 @@ nav {
     text-align: center;
 }
 
+#feature-article-carousel img {
+  width: 100%;
+  height: 100%;
+}
+
+.feature-article-images {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
 
 .owl-theme {
   .owl-nav {
-    /*default owl-theme theme reset .disabled:hover links */
     [class*='owl-'] {
       transition: all .3s ease;
       &.disabled:hover {
@@ -169,7 +193,6 @@ nav {
   }
 }
 
-/*arrows on first carousel*/
 #feature-article-carousel.owl-theme {
   position: relative;
   .owl-next, .owl-prev {
@@ -178,7 +201,9 @@ nav {
     margin-top: -20px;
     position: absolute;
     top: 50%;
+    color: white;
   }
+  
   .owl-prev {
     left: 10px;
   }
@@ -198,6 +223,8 @@ nav {
   .feature-article {
     display: flex;
     align-items: center;
+    margin-right: 100px;
+    margin-left: 100px;
   }
 
   .feature-article-text {
