@@ -11,8 +11,8 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="scripts/script.js" defer></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -25,6 +25,12 @@
       </div>
       <!-- hamburger-menu -->
       <!-- menu-wrapper -->
+
+      <img id="nav-logo" src="./images/logo-small.png" alt="logo" srcset="./images/logo-small.png 359w,
+              ./images/logo-large.png 648w
+                " sizes="(max-width: 1200px) calc(300px - 60px),
+                        300px" />
+
       <ul id="nav-desktop" class="menu-list">
         <li><a href="#">Politics</a></li>
         <li><a href="#">Opinions</a></li>
@@ -35,8 +41,6 @@
         <li><a href="#">Tech</a></li>
         <li><a href="#">World</a></li>
       </ul>
-
-
   </div>
 
   <div class="nav-mobile-container">
@@ -54,34 +58,36 @@
   </nav>
   </div>
 
+
   <!-- feature article  -->
   <div class="feature-article">
     <div class="feature-article-images">
       <div id="feature-article-carousel" class="owl-carousel owl-theme">
         <div class="item">
-          <h1>1</h1>
+          <img src="images/codepen-1.PNG" alt="Codepen 1">
         </div>
         <div class="item">
-          <h1>2</h1>
+          <img src="images/codepen-2.PNG" alt="Codepen 1">
         </div>
         <div class="item">
-          <h1>3</h1>
+          <img src="images/codepen-3.PNG" alt="Codepen 3">
         </div>
         <div class="item">
-          <h1>4</h1>
+          <img src="images/codepen-4.PNG" alt="Codepen 4">
         </div>
       </div>
     </div>
-    <div class="feature-article-text">
-      <h1>Feature Article Title</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-        ultricies, nisl vitae aliquam ultricies, nunc nisl aliquet
-        sapien, vel aliquam nisl nisl vitae nunc. Donec ultricies, nisl
-        vitae aliquam ultricies, nunc nisl aliquet sapien, vel aliquam
-        nisl nisl vitae nunc.
-      </p>
-    </div>
+  </div>
+  <div class="feature-article-text">
+    <h1>Feature Article Title</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+      ultricies, nisl vitae aliquam ultricies, nunc nisl aliquet
+      sapien, vel aliquam nisl nisl vitae nunc. Donec ultricies, nisl
+      vitae aliquam ultricies, nunc nisl aliquet sapien, vel aliquam
+      nisl nisl vitae nunc.
+    </p>
+  </div>
   </div>
 
   <!-- list of smaller articles -->
@@ -114,7 +120,9 @@
       <span class="published-date">Published Jan.15, 2024</span>
     </article>
     <article>
-      <img src="./images/article-img.png" />
+      <div class='media-content'>
+        <img src="./images/article-img.png" />
+      </div>
       <header>Understanding the Iowa caucuses and why they’re important to the election</header>
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
         quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
@@ -124,7 +132,9 @@
       <span class="published-date">Published Jan.15, 2024</span>
     </article>
     <article>
-      <img src="./images/article-img.png" />
+      <div class='media-content'>
+        <img src="./images/article-img.png" />
+      </div>
       <header>Understanding the Iowa caucuses and why they’re important to the election</header>
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
         quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
@@ -133,6 +143,7 @@
       <span class="author">By Alex Fang</span><br />
       <span class="published-date">Published Jan.15, 2024</span>
     </article>
+
   </section>
 </body>
 

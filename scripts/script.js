@@ -29,13 +29,18 @@ $(function () {
     $('body').toggleClass('overflow-hidden');
   });
 
+  //add a faded out play icon on article images that have a videos associated
+  // const $playIcon = $('<i></i>').addClass('fa fa-play-circle play-icon');
+  const $playIcon = $('<i></i>').addClass('fa fa-play play-icon');
+  $('.media-content').find('video').parent().prepend($playIcon);
+
   //play video on mouseover the article image
   $(document).on('mouseover', '.media-content', function () {
     const $video = $(this).find('video');
-    //if video is given, hide image and play video
+    //if video is given, hide image and play-icon then play video
     if ($video.length) {
-      const $image = $(this).find('img');
-      $image.css('display', 'none');
+      $(this).find('img').css('display', 'none');
+      $(this).find('.play-icon').css('display', 'none');
       $video.css('display', 'block');
       $video.get(0).muted = true;
       $video.get(0).currentTime = 0;
@@ -48,8 +53,8 @@ $(function () {
     const $video = $(this).find('video');
     //if video was given, hide it and show article image again
     if ($video.length) {
-      const $image = $(this).find('img');
-      $image.css('display', 'block');
+      $(this).find('img').css('display', 'block');
+      $(this).find('.play-icon').css('display', 'inline-block');
       $video.css('display', 'none');
       $video.get(0).pause();
     }
