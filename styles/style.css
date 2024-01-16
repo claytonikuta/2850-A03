@@ -26,6 +26,7 @@ body {
 }
 
 
+
 /* Nav Bar Styles */
 nav {
     border-bottom: 1px solid lightgrey;
@@ -36,6 +37,7 @@ nav {
     padding: 0;
     align-items: center;
     gap: 20px;
+    height: 70px;
   }
   
 
@@ -64,6 +66,7 @@ nav {
     position: absolute;
     left: -100%;
     transition: left 1s;
+    background-color: white;
   }
 
   .nav-mobile-container.active{
@@ -102,9 +105,14 @@ nav {
     border-radius: 30px;
   }
 
-  nav img{
+  nav img:not(#nav-logo){
     width: var(--navmenu-button-sizes);
   }
+
+  #nav-desktop{
+    display: none;
+  }
+  
 
   nav img:hover{
     background-color: lightgrey;
@@ -195,6 +203,9 @@ nav {
 }
 
 
+
+
+
 @media (min-width: 768px) {
   .feature-article {
     display: flex;
@@ -224,5 +235,27 @@ nav {
   .feature-article-text h1 {
     font-size: 2em;
   }
+
+
+  #nav-desktop{
+    display: none;
+  }
+  
+
+
 }
 
+
+
+@media (min-width: 1200px) {
+
+  #nav-logo{
+    display: none;
+  }
+
+
+  #nav-desktop{
+    display: block;
+  }
+  
+}
