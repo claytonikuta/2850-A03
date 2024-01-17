@@ -17,6 +17,12 @@ body {
   padding: 0px;
 }
 
+body h1 {
+  font-family: var(--fonts-headline);
+  font-size: 40px;
+  margin-bottom: auto;
+}
+
 #menu-wrapper {
   max-width: 100%;
   display: grid;
