@@ -254,6 +254,8 @@ nav img {
 .feature-article {
   margin-top: 15px;
   margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
 }
 
 #feature-article-carousel {
@@ -343,7 +345,11 @@ nav img {
   font-weight: 600;
 }
 
-
+footer {
+  display: flex;
+  justify-content: center;
+  font-family: var(--fonts-body);
+}
 
 /* All-Articles Section Styling */
 #article-grid {
@@ -351,6 +357,8 @@ nav img {
   grid-template-columns: repeat(auto-fit, minmax(var(--article-width), 1fr));
   justify-items: center;
   column-gap: var(--article-grid-gap);
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
 }
 
 #article-grid article {
@@ -415,6 +423,7 @@ body h1{
     align-items: center;
     /* margin-right: 50px;
     margin-left: 50px; */
+    border-bottom: 1px solid black;
   }
 
   .feature-article-text {
