@@ -225,149 +225,14 @@ nav img {
   transition: 0.4s ease-in-out;
 }
 
-/* Feature Styles */
-#feature-logo {
-  display: none;
-}
-
-.feature-article {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid black;
-}
-
-#feature-article-carousel {
-  height: 100%;
-}
-
-#feature-article-carousel .item {
-  padding: 0px;
-  margin: 0px;
-  color: #fff;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  text-align: center;
-}
-
-#feature-article-carousel img {
-  width: 100%;
-  height: 100%;
-}
-
-.feature-article-images {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px;
-}
-
-.owl-theme {
-  .owl-nav {
-    [class*="owl-"] {
-      transition: all 0.3s ease;
-      &.disabled:hover {
-        background-color: #d6d6d6;
-      }
-    }
-  }
-}
-
-#feature-article-carousel.owl-theme {
-  position: relative;
-  .owl-next,
-  .owl-prev {
-    width: 22px;
-    height: 40px;
-    margin-top: -20px;
-    position: absolute;
-    top: 50%;
-    filter: invert(70%);
-  }
-
-  .owl-prev {
-    left: 10px;
-  }
-  .owl-next {
-    right: 10px;
-  }
-}
-
-.feature-article-text:not(h1) {
-  font-family: var(--fonts-body);
-  font-size: var(--font-size-body);
-}
-
-.feature-article-text h1 {
-  font-family: var(--fonts-headline);
-  font-weight: var(--nav-fontWeights-bold);
-  margin: 0;
-  padding: 0;
-  line-height: 1.2;
-}
-
-.art-cat,
-.art-tag,
-.author,
-.published-date {
-  margin: 0;
-  padding: 0;
-  line-height: 1.2;
-  font-family: var(--fonts-body);
-  font-size: var(--fonts-size-subinfo);
-  color: var(--fonts-color-subinfo);
-  display: inline-block;
-}
-
-.art-cat,
-.art-tag {
-  font-weight: 600;
-}
-
 footer {
   display: flex;
   justify-content: center;
   font-family: var(--fonts-body);
 }
 
-/* #article-grid .art-cat,
-#article-grid .art-tag {
-  display: inline-block;
-  font-weight: 600;
-  padding-bottom: 5px;
-} */
-
 /* Media Query */
 @media (min-width: 768px) {
-  .feature-article {
-    display: flex;
-    align-items: center;
-    /* margin-right: 50px;
-    margin-left: 50px; */
-    border-bottom: 1px solid black;
-  }
-
-  .feature-article-text {
-    order: 1;
-    width: 50%;
-    box-sizing: border-box;
-    /* padding: 20px; */
-    align-self: flex-start;
-    font-size: 0.7rem;
-  }
-
-  .feature-article-images {
-    /* padding: 20px; */
-    order: 2;
-    width: 50%;
-    box-sizing: border-box;
-    align-self: flex-start;
-  }
-
-  #feature-article-carousel {
-    height: 100%;
-  }
-
   #nav-desktop {
     display: none;
   }
@@ -380,29 +245,15 @@ footer {
     display: flex;
     justify-content: center;
   }
-
-  main {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
 }
 
 @media (min-width: 1200px) {
-  main {
-    margin-left: 200px;
-    margin-right: 200px;
-  }
-
   #nav-logo {
     display: none;
   }
 
   #nav-desktop {
     display: block;
-  }
-
-  .feature-article-text {
-    font-size: 1rem;
   }
 
   #hamburger-menu-button {
@@ -412,12 +263,5 @@ footer {
   .nav-desktop-container {
     display: flex;
     justify-content: flex-start;
-  }
-
-  #feature-logo {
-    display: block;
-    height: 90px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
