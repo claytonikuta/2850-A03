@@ -1,0 +1,59 @@
+@use "variables" as *;
+
+/* All-Articles Section Styling */
+#article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--article-width), 1fr));
+  justify-items: center;
+  column-gap: var(--article-grid-gap);
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+#article-grid article {
+  min-width: var(--article-width);
+}
+
+#article-grid .media-content {
+  position: relative;
+  margin: 20px auto;
+}
+
+#article-grid img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.play-icon {
+  box-sizing: border-box;
+  position: absolute;
+  padding: 0.5rem 0 0 0.5rem;
+  color: skyblue;
+}
+.play-icon::before {
+  margin: auto;
+  font-size: 1.5rem;
+  max-width: 20px;
+  max-height: 20px;
+}
+
+#article-grid video {
+  width: 100%;
+  display: none;
+}
+
+body h1 {
+  font-family: var(--fonts-headline);
+  font-size: 40px;
+  margin-bottom: auto;
+}
+
+#article-grid header {
+  font-family: var(--fonts-headline);
+  font-size: var(--font-size-headline);
+}
+
+#article-grid p {
+  font-family: var(--fonts-body);
+  font-size: var(--font-size-body);
+}
