@@ -303,7 +303,7 @@ nav img {
     margin-top: -20px;
     position: absolute;
     top: 50%;
-    color: white;
+    filter:invert(70%);
   }
 
   .owl-prev {
