@@ -25,13 +25,6 @@ body h1 {
   margin-bottom: auto;
 }
 
-#menu-wrapper {
-  max-width: 100%;
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  justify-content: space-between;
-}
-
 main {
   padding: 20px;
 }
@@ -42,37 +35,4 @@ footer {
   font-family: var(--fonts-body);
 }
 
-/* Media Query */
-@media (min-width: 768px) {
-  #nav-desktop {
-    display: none;
-  }
 
-  #nav-logo {
-    justify-content: center;
-  }
-
-  .nav-desktop-container {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-@media (min-width: 1200px) {
-  #nav-logo {
-    display: none;
-  }
-
-  #nav-desktop {
-    display: block;
-  }
-
-  #hamburger-menu-button {
-    display: none;
-  }
-
-  .nav-desktop-container {
-    display: flex;
-    justify-content: flex-start;
-  }
-}
