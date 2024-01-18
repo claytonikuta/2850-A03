@@ -2,6 +2,10 @@
 
 $border-styling : 1px solid lightgrey;
 
+@function hamburger-menu-height() {
+  
+}
+
 @mixin flexCenterVertical {
   display: flex;
   align-items: center;
