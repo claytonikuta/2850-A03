@@ -5,11 +5,44 @@
   //placeholder to set basic grid layout, font size and family
   @extend %article-grid-base;
 
-  //override base styling to calculate ideal column number based on input
-  //min width and viewport width
-  @include reponsive-grid-template-columns(var(--text-article-width));
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  //overrided property
+  gap: 0;
 
   article {
     min-width: var(--text-article-width);
+    position: relative;
+    padding: 10px;
+
+    //horizontal partial borders
+    &:nth-child(n + 3):before {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      border-top: 1px solid black;
+      content: '';
+      justify-content: center;
+      transform: translateX(5%);
+      width: 90%;
+      height: 100%;
+    }
+
+    //vertical partial borders
+    &:nth-child(2n):after {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      border-left: 1px solid black;
+      content: '';
+      text-align: center;
+      transform: translateY(10%);
+      width: 100%;
+      height: 80%;
+    }
   }
 }

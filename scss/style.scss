@@ -46,22 +46,17 @@ footer {
   .feature-article {
     display: flex;
     align-items: center;
-    /* margin-right: 50px;
-    margin-left: 50px; */
-    border-bottom: 1px solid black;
   }
 
   .feature-article-text {
     order: 1;
     width: 50%;
     box-sizing: border-box;
-    /* padding: 20px; */
     align-self: flex-start;
     font-size: 0.7rem;
   }
 
   .feature-article-images {
-    /* padding: 20px; */
     order: 2;
     width: 50%;
     box-sizing: border-box;
