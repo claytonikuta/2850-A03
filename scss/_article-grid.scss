@@ -1,16 +1,18 @@
-@use "variables" as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'placeholders' as *;
 
 /* All-Articles Section Styling */
 #article-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--article-width), 1fr));
-  justify-items: center;
-  column-gap: var(--article-grid-gap);
-  padding-bottom: 10px;
-  border-bottom: 1px solid black;
+  //placeholder to set basic grid layout, font size and family
+  @extend %article-grid-base;
+
+  //override base styling to calculate ideal column number based on input
+  //min width and viewport width
+  @include reponsive-grid-template-columns(var(--img-article-width));
 
   article {
-    min-width: var(--article-width);
+    min-width: var(--img-article-width);
   }
 
   .media-content {
@@ -26,16 +28,6 @@
   video {
     width: 100%;
     display: none;
-  }
-
-  header {
-    font-family: var(--fonts-headline);
-    font-size: var(--font-size-headline);
-  }
-
-  p {
-    font-family: var(--fonts-body);
-    font-size: var(--font-size-body);
   }
 }
 

@@ -1,0 +1,15 @@
+@use 'mixins' as *;
+@use 'placeholders' as *;
+
+#text-grid {
+  //placeholder to set basic grid layout, font size and family
+  @extend %article-grid-base;
+
+  //override base styling to calculate ideal column number based on input
+  //min width and viewport width
+  @include reponsive-grid-template-columns(var(--text-article-width));
+
+  article {
+    min-width: var(--text-article-width);
+  }
+}

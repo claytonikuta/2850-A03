@@ -1,0 +1,32 @@
+@use 'variables' as *;
+
+%article-grid-base {
+  display: grid;
+  justify-items: center;
+  column-gap: var(--article-grid-gap);
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+
+  //default grid layout of 4 columns
+  grid-template-columns: repeat(4, 1fr);
+
+  header {
+    font-family: var(--fonts-headline);
+    font-size: var(--font-size-headline);
+  }
+
+  p {
+    font-family: var(--fonts-body);
+    font-size: var(--font-size-body);
+  }
+
+  span {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    font-family: var(--fonts-body);
+    font-size: var(--fonts-size-subinfo);
+    color: var(--fonts-color-subinfo);
+    display: inline-block;
+  }
+}

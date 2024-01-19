@@ -1,0 +1,8 @@
+@use 'variables' as *;
+
+//calculate how many column to generate based on input column width and viewport width
+@mixin reponsive-grid-template-columns(
+  $article-width: var(--img-article-width)
+) {
+  grid-template-columns: repeat(auto-fit, minmax($article-width, 1fr));
+}
