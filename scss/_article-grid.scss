@@ -7,7 +7,7 @@
   //placeholder to set basic grid layout, font size and family
   @extend %article-grid-base;
 
-  //override base styling to calculate ideal column number based on input
+  //overrided base styling to calculate ideal column number based on input
   //min width and viewport width
   @include reponsive-grid-template-columns(var(--img-article-width));
 

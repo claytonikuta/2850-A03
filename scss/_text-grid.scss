@@ -7,42 +7,40 @@
 
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+
   //overrided property
   gap: 0;
 
   article {
-    min-width: var(--text-article-width);
     position: relative;
     padding: 10px;
 
-    //horizontal partial borders
-    &:nth-child(n + 3):before {
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 0;
-      padding: 10px;
-      border-top: 1px solid black;
-      content: '';
-      justify-content: center;
-      transform: translateX(5%);
-      width: 90%;
-      height: 100%;
+    //add top partial border to bottom row
+    &:nth-child(n + 3) {
+      @include top-horizontal-partial-border($percent-length: 90);
     }
 
-    //vertical partial borders
-    &:nth-child(2n):after {
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 0;
-      padding: 10px;
-      border-left: 1px solid black;
-      content: '';
-      text-align: center;
-      transform: translateY(10%);
-      width: 100%;
-      height: 80%;
+    //add left partial border to right column
+    &:nth-child(2n) {
+      @include left-vertical-partial-border($percent-length: 80);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #text-grid {
+    grid-template-columns: repeat(4, 1fr);
+
+    article {
+      //remove all top partial borders
+      &:nth-child(n) {
+        @include top-horizontal-partial-border($percent-length: 0);
+      }
+
+      //add left partial borders to all except left most articles
+      &:nth-child(n + 2) {
+        @include left-vertical-partial-border($percent-length: 90);
+      }
     }
   }
 }

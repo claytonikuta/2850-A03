@@ -6,3 +6,33 @@
 ) {
   grid-template-columns: repeat(auto-fit, minmax($article-width, 1fr));
 }
+
+//create left partial vertical border for a div using :after. assume parent element
+//has position:relative
+@mixin left-vertical-partial-border($percent-length: 90) {
+  &::after {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    border-left: 1px solid black;
+    content: '';
+    transform: translateY((100 - $percent-length) / 2 + 0%);
+    width: 100%;
+    height: $percent-length + 0%;
+  }
+}
+
+@mixin top-horizontal-partial-border($percent-length: 90) {
+  &::before {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    border-top: 1px solid black;
+    content: '';
+    transform: translateX((100 - $percent-length) / 2 + 0%);
+    width: $percent-length + 0%;
+    height: 100%;
+  }
+}

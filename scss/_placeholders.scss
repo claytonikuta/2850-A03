@@ -8,6 +8,10 @@
   //default grid layout of 2 columns
   grid-template-columns: repeat(2, 1fr);
 
+  //set all rows and column to adopt the max values seen across grid
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
+
   header {
     font-family: var(--fonts-headline);
     font-size: var(--font-size-headline);
