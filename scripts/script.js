@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var feature = $('#feature-article-carousel');
-
+  // script to get the carousel to rotate, show the dots and arrows and autoplay
   feature.owlCarousel({
     items: 1,
     slideSpeed: 2000,

@@ -1,5 +1,5 @@
 @use 'variables' as *;
-
+/* All-Feature Section Styling */
 #feature-logo {
   display: none;
 }
@@ -10,6 +10,7 @@
   padding-bottom: 10px;
 }
 
+/* Feature Article Carousel Styling and it's children */
 #feature-article-carousel {
   height: 100%;
 
@@ -35,6 +36,7 @@
   padding: 10px;
 }
 
+/* Owl Carousel Styling */
 .owl-theme {
   .owl-nav {
     [class*='owl-'] {
