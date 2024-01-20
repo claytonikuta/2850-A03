@@ -15,9 +15,9 @@
     display: block;
     top: 0;
     left: 0;
-    border-left: 1px solid black;
+    border-left: $grey-border-1px;
     content: '';
-    transform: translateY((100 - $percent-length) / 2 + 0%);
+    transform: translateY(calc((100 - $percent-length) / 2) + 0%);
     width: 100%;
     height: $percent-length + 0%;
   }
@@ -29,9 +29,9 @@
     display: block;
     top: 0;
     left: 0;
-    border-top: 1px solid black;
+    border-top: $grey-border-1px;
     content: '';
-    transform: translateX((100 - $percent-length) / 2 + 0%);
+    transform: translateX(calc((100 - $percent-length) / 2) + 0%);
     width: $percent-length + 0%;
     height: 100%;
   }

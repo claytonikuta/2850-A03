@@ -1,12 +1,13 @@
 @use 'mixins' as *;
 @use 'placeholders' as *;
+@use 'variables' as *;
 
 #text-grid {
   //placeholder to set basic grid layout, font size and family
   @extend %article-grid-base;
 
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: $grey-border-1px;
+  border-bottom: $grey-border-1px;
 
   //overrided property
   gap: 0;
