@@ -69,12 +69,32 @@ ul li a {
   padding: 8px;
 }
 
-nav ul li a.active,
-nav ul li a:hover {
-  color: black;
-  background-color: lightgrey;
-  border-radius: 30px;
+nav {
+  ul {
+    li {
+      a.active,
+      a:hover {
+        color: black;
+        background-color: lightgrey;
+        border-radius: 30px;
+        animation: blinkAnimation 2s ease-in-out infinite;
+      }
+    }
+  }
 }
+
+@keyframes blinkAnimation {
+  0% {
+    background-color: lightgrey;
+  }
+  50% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: lightgrey;
+  }
+}
+
 
 nav img:not(#nav-logo) {
   width: var(--navmenu-button-sizes);
