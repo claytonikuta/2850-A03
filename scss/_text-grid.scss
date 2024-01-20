@@ -5,11 +5,42 @@
   //placeholder to set basic grid layout, font size and family
   @extend %article-grid-base;
 
-  //override base styling to calculate ideal column number based on input
-  //min width and viewport width
-  @include reponsive-grid-template-columns(var(--text-article-width));
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+  //overrided property
+  gap: 0;
 
   article {
-    min-width: var(--text-article-width);
+    position: relative;
+    padding: 10px;
+
+    //add top partial border to bottom row
+    &:nth-child(n + 3) {
+      @include top-horizontal-partial-border($percent-length: 90);
+    }
+
+    //add left partial border to right column
+    &:nth-child(2n) {
+      @include left-vertical-partial-border($percent-length: 80);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #text-grid {
+    grid-template-columns: repeat(4, 1fr);
+
+    article {
+      //remove all top partial borders
+      &:nth-child(n) {
+        @include top-horizontal-partial-border($percent-length: 0);
+      }
+
+      //add left partial borders to all except left most articles
+      &:nth-child(n + 2) {
+        @include left-vertical-partial-border($percent-length: 90);
+      }
+    }
   }
 }
