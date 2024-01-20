@@ -19,12 +19,25 @@ $(document).ready(function () {
 $(function () {
   function slideMenu() {
     var activeState = $('.nav-mobile-container').hasClass('active');
-    // $("#menu-container .nav-mobile-conatainer").css({left: activeState ? "0%" : "-100%"}, 400);
+    $("#menu-container .nav-mobile-container").css({left: activeState ? "0%" : "-100%"}, 400);
   }
+
+  function checkViewportWidth() {
+    var viewportWidth = $(window).width();
+    var menuContainer = $('.nav-mobile-container');
+
+    if (viewportWidth >= 1200 && menuContainer.hasClass('active')) {
+      menuContainer.removeClass('active');
+      slideMenu();
+    }
+  }
+
+  $(window).on('resize', checkViewportWidth);
+
   $('#hamburger-menu-button').click(function (event) {
     event.stopPropagation();
     $('.nav-mobile-container').toggleClass('active');
-    // slideMenu();
+    slideMenu();
 
     $('body').toggleClass('overflow-hidden');
   });
