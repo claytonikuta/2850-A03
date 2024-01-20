@@ -1,17 +1,5 @@
 @use "variables" as *;
-
-// $grey-border-1px : 1px solid lightgrey;
-
-@mixin flexCenterVertical {
-  display: flex;
-  align-items: center;
-}
-
-@mixin fullFontStyling {
-  font-family: var(--font-family-franklin);
-  font-size: var(--nav-fontSize);
-  font-weight: var(--nav-fontWeights-bold);
-}
+@use 'mixins' as *;
 
 /* Nav Bar Styles */
 nav {
